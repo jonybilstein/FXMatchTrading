@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KajolBezol.UI.Pages.ProfilePage"
+             xmlns:viemodel="clr-namespace:KajolBezol.UI.ViewModels"
+             x:DataType="viemodel:ProfilePageViewModel" BackgroundColor="#8fa6bc"
+             xmlns:res="clr-namespace:KajolBezol.UI.Localization">
+
+    <VerticalStackLayout Margin="50,30,50,30">
+        <Label  Text="{Binding UserName}" VerticalOptions="Center" TextType="Html"  HorizontalOptions="Start" FontSize="Medium" TextColor="Blue" FontAttributes="Bold" Margin="0,0,0,15"/>
+        <Label  Text="{x:Static res:AppResources.UsePolicyTxt}" VerticalOptions="Center"   HorizontalOptions="Start" FontAttributes="Bold" TextColor="Blue" TextDecorations="Underline" Margin="0,0,0,5" />
+        <ScrollView MaximumHeightRequest="300" VerticalScrollBarVisibility="Always">
+            <Label  Text="{Binding UsePolicy}" VerticalOptions="Center"   HorizontalOptions="Start"  />
+        </ScrollView>
+        <ImageButton x:Name="logoutImage" Source="logout.svg"  HorizontalOptions="Center"  VerticalOptions="Center" WidthRequest="70" HeightRequest="70" Command="{Binding TapExitCommand}" Margin="0,40,0,0"/>
+        <Label  Text="{x:Static res:AppResources.ExitTxt}"   VerticalOptions="Center"   HorizontalOptions="Center">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer
+         Command="{Binding TapExitCommand}"/>
+            </Label.GestureRecognizers>
+        </Label>
+    </VerticalStackLayout>
+
+</ContentPage>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KajolBezol.UI.Pages.HomePage"
+             xmlns:local="clr-namespace:KajolBezol.UI.Pages"
+             Title="HomePage"
+             xmlns:viemodel="clr-namespace:KajolBezol.UI.ViewModels"
+             x:DataType="viemodel:HomePageViewModel"
+             xmlns:res="clr-namespace:KajolBezol.UI.Localization">
+    <local:ProfilePage Title="{x:Static res:AppResources.ProfileTab}"  />
+    <local:TradingPage Title="{x:Static res:AppResources.TransactTab}" />
+    <local:MatchPage Title="{x:Static res:AppResources.BillboardTab}" />
+    
+
+
+</TabbedPage>

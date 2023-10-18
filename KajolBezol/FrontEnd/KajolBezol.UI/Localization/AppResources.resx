@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdminContactMsg" xml:space="preserve">
+    <value>ADMIN CONTACT</value>
+  </data>
+  <data name="BidConfirmBuy" xml:space="preserve">
+    <value>You bid to buy US${0}</value>
+  </data>
+  <data name="BidConfirmSell" xml:space="preserve">
+    <value>You bid to sell US${0}</value>
+  </data>
+  <data name="BidToBuy" xml:space="preserve">
+    <value>Bid to Buy</value>
+  </data>
+  <data name="BidToSell" xml:space="preserve">
+    <value>Bid to Sell</value>
+  </data>
+  <data name="BillboardTab" xml:space="preserve">
+    <value>BILLBOARD</value>
+  </data>
+  <data name="BuyMatched" xml:space="preserve">
+    <value>Your US$ {0} buy bid has been matched to a peer transaction under code #{1}. Send a WhatsApp message to the admin in order to coordinate the details of the transaction.</value>
+  </data>
+  <data name="BuyPriceTxt" xml:space="preserve">
+    <value>Buy Price</value>
+  </data>
+  <data name="BuyRightNow" xml:space="preserve">
+    <value>Buy Right Away</value>
+  </data>
+  <data name="BuyStillNoMatch" xml:space="preserve">
+    <value>Your buy bid for US${0} still has no match. We'll let you know today once it gets matched.</value>
+  </data>
+  <data name="BuyVerbTxt" xml:space="preserve">
+    <value>BUY</value>
+  </data>
+  <data name="CannotTradePrevOperation" xml:space="preserve">
+    <value>You cannot continue trading until your current transaction is cleared. Check the billboard for state and details about your current transaction.</value>
+  </data>
+  <data name="CheckBillboardForDetails" xml:space="preserve">
+    <value>Check the billboard for additional info.</value>
+  </data>
+  <data name="CheckBillboardPeriodically" xml:space="preserve">
+    <value>Check new notifications and the billboard periodically. We'll let you know once your bid is matched.</value>
+  </data>
+  <data name="ClosedTitle" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="ClosedTxt" xml:space="preserve">
+    <value>At this moment trading is closed. Check days and time when trading is open. </value>
+  </data>
+  <data name="ErrorDescription" xml:space="preserve">
+    <value>An error has occurred. Try again later.</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ExchangeRateMsg" xml:space="preserve">
+    <value>EXCHANGE RATE</value>
+  </data>
+  <data name="ExitTxt" xml:space="preserve">
+    <value>Sign Out</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>Either user or password are wrong</value>
+  </data>
+  <data name="NewVersionBody" xml:space="preserve">
+    <value>There is a new version available. Download it first to be able to log in</value>
+  </data>
+  <data name="NewVersionTitle" xml:space="preserve">
+    <value>New Version</value>
+  </data>
+  <data name="NoBids" xml:space="preserve">
+    <value>No bids at this time. Click on Trade tab and bid to buy or sell from your peers.</value>
+  </data>
+  <data name="ProfileTab" xml:space="preserve">
+    <value>PROFILE</value>
+  </data>
+  <data name="SelectAmountTxt" xml:space="preserve">
+    <value>SELECT AMOUNT</value>
+  </data>
+  <data name="SellMatched" xml:space="preserve">
+    <value>Your US$ {0} sell bid has been matched to a peer transaction under code #{1}. Send a WhatsApp message to the admin in order to coordinate the details of the transaction.</value>
+  </data>
+  <data name="SellPriceTxt" xml:space="preserve">
+    <value>Sell Price</value>
+  </data>
+  <data name="SellRightNow" xml:space="preserve">
+    <value>Sell Right Away</value>
+  </data>
+  <data name="SellStillNoMatch" xml:space="preserve">
+    <value>Your sell bid for US${0} still has no match. We'll let you know today once it gets matched.</value>
+  </data>
+  <data name="SellVerbTxt" xml:space="preserve">
+    <value>SELL</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="SignIn2" xml:space="preserve">
+    <value>with user name and password</value>
+  </data>
+  <data name="SignInBtnTxt" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="TransactionConfirmBuy" xml:space="preserve">
+    <value>You bought US${0}</value>
+  </data>
+  <data name="TransactionConfirmSell" xml:space="preserve">
+    <value>You sold US${0}</value>
+  </data>
+  <data name="TransactionTypeTxt" xml:space="preserve">
+    <value>TRANSACTION TYPE</value>
+  </data>
+  <data name="TransactTab" xml:space="preserve">
+    <value>TRADE</value>
+  </data>
+  <data name="UsePolicyTxt" xml:space="preserve">
+    <value>Usage and Privacy Policies</value>
+  </data>
+  <data name="WelcomeTxt" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+</root>

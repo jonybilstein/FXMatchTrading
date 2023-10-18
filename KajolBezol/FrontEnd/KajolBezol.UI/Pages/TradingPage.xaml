@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KajolBezol.UI.Pages.TradingPage"
+             Title="TradingPage"
+             xmlns:viemodel="clr-namespace:KajolBezol.UI.ViewModels"
+             x:DataType="viemodel:TradingPageViewModel" BackgroundColor="#8fa6bc"
+             xmlns:res="clr-namespace:KajolBezol.UI.Localization">
+    <VerticalStackLayout Margin="5,60,5,0">
+        
+        <Border Padding="15,5,5,15" Margin="0,0,0,20" IsVisible="{Binding ShowWarning}">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10,10,10,10" />
+            </Border.StrokeShape>
+            <HorizontalStackLayout VerticalOptions="Center">
+                <Image Source="exclamation.svg" WidthRequest="30" HeightRequest="30" Margin="0,0,10,0"></Image>
+                <Label Text="{Binding OperacionEnCurso}" LineBreakMode="WordWrap" WidthRequest="300" Margin="5,15,5,15"  />
+            </HorizontalStackLayout>
+        </Border>
+        
+        
+        <Border BackgroundColor="#dce5ee" Padding="5,30,5,30" >
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10,10,10,10"/>
+            </Border.StrokeShape>
+            <VerticalStackLayout>
+                <Label Text="{x:Static res:AppResources.TransactionTypeTxt}" HorizontalOptions="Center" Margin="0,0,0,-15" FontAttributes="Bold" TextColor="Black" />
+                <Border HorizontalOptions="Center" WidthRequest="160" HeightRequest="50"  Margin="5,20,5,20">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10,10,10,10"/>
+                    </Border.StrokeShape>
+                    <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                        <Button WidthRequest="80" Text="{x:Static res:AppResources.SellVerbTxt}" Background="{Binding BuyColor}" CornerRadius="0" Padding="0" TextColor="Black" FontSize="12" FontAttributes="Bold"  Command="{Binding VenderBtnCommand}"></Button>
+                        <Button WidthRequest="80" Text="{x:Static res:AppResources.BuyVerbTxt}" Background="{Binding SellColor}" CornerRadius="0" Padding="0" TextColor="Black" FontSize="12" FontAttributes="Bold" Command="{Binding ComprarBtnCommand}"></Button>
+                    </HorizontalStackLayout>
+                </Border>
+                <Label Text="{x:Static res:AppResources.SelectAmountTxt}" HorizontalOptions="Center" Margin="0,20,0,20" FontAttributes="Bold"  TextColor="Black"/>
+                <Slider Maximum="1000" Minimum="100"  Value="{Binding DollarAmount}"  WidthRequest="300"/>
+                <Label x:Name="displayLabel"
+                           Text="{Binding TransactionDisplay}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" FontSize="25" FontAttributes="Bold" TextColor="Black" />
+                <Button Text="{Binding OperationTypeSpanishTxt}" Command="{Binding SendRequestCommand}" IsVisible="{Binding IsTradeButtonVisible}" WidthRequest="300" CornerRadius="0" Margin="0,30,0,30"/>
+            </VerticalStackLayout>
+        </Border>
+        <ActivityIndicator Color="Blue" IsRunning="{Binding IsRunning}"></ActivityIndicator>
+    </VerticalStackLayout>
+
+</ContentPage>

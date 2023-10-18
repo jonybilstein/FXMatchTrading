@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KajolBezol.UI.Pages.LoginPage"
+             Title="LoginPage"
+             xmlns:viemodel="clr-namespace:KajolBezol.UI.ViewModels"
+             x:DataType="viemodel:LoginPageViewModel"
+             xmlns:res="clr-namespace:KajolBezol.UI.Localization">
+    <VerticalStackLayout BackgroundColor="LightGrey">
+        <Border Margin="-5" HeightRequest="250" BackgroundColor="Black">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="0,0,60,60"/>
+            </Border.StrokeShape>
+            <Image Source="kajol_image.jpg"  />
+        </Border>
+        <Label 
+            Text="{x:Static res:AppResources.SignIn}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" FontSize="20" Margin="0,60,0,5" FontAttributes="Bold" TextColor="Blue"/>
+        <Label 
+            Text="{x:Static res:AppResources.SignIn2}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" FontSize="20"  Margin="0,0,0,20" FontAttributes="Bold" TextColor="Blue"/>
+        <Entry x:Name="user"
+            Margin="0,0,0,20"
+            WidthRequest="300"
+            Placeholder="Usuario"
+            Text="{Binding User}" />
+        <Entry x:Name="password"
+            Margin="0,0,0,15"
+            WidthRequest="300"
+            Placeholder="Contraseña"
+            Text="{Binding Password}" 
+            IsPassword="true" />
+        <Label  Text="{Binding ErrorMessage}"  HorizontalOptions="Center" Margin="0,0,0,60" TextColor="Red"/>
+        <Button Text="{x:Static res:AppResources.SignInBtnTxt}" Command="{Binding LoginCommand}" WidthRequest="100"  />
+        <ActivityIndicator Color="Blue" IsRunning="{Binding IsRunning}" Margin="60"></ActivityIndicator>
+    </VerticalStackLayout>
+</ContentPage>

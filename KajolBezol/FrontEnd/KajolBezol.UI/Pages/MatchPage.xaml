@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KajolBezol.UI.Pages.MatchPage"
+             Title="Match" 
+             xmlns:viemodel="clr-namespace:KajolBezol.UI.ViewModels"
+             x:DataType="viemodel:MatchPageViewModel" BackgroundColor="#8fa6bc"
+             xmlns:res="clr-namespace:KajolBezol.UI.Localization">
+    <VerticalStackLayout Margin="5,60,5,0" Spacing="0" >
+        <!--Primer Mensaje-->
+        <Border BackgroundColor="Black" HeightRequest="40"  >
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10,10,0,0"/>
+            </Border.StrokeShape>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Image BackgroundColor="Black" Source="us_flag_icon_round.svg"  IsVisible="True"  HeightRequest="20" WidthRequest="20" />
+                <Label Text="{x:Static res:AppResources.ExchangeRateMsg}" Padding="9"  FontAttributes="Bold"  TextColor="White" />
+            </HorizontalStackLayout>
+
+        </Border>
+        <Border BackgroundColor="#feffff" HeightRequest="140" Margin="0,-5,0,20">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="0,0,10,10"/>
+            </Border.StrokeShape>
+            <Grid HorizontalOptions="Center" Margin="0,20,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="150" />
+                </Grid.ColumnDefinitions>
+                <Label Text="{x:Static res:AppResources.SellPriceTxt}" FontSize="25" HorizontalOptions="Center" TextColor="Black" />
+                <BoxView Grid.Column="1" Grid.RowSpan="2" Color="Black" />
+                <Label Text="{x:Static res:AppResources.BuyPriceTxt}"  Grid.Column="2" FontSize="25" HorizontalOptions="Center" TextColor="Black" />
+                <Label Text="{Binding SellPrice}" Grid.Row="1"  HorizontalOptions="Center"  VerticalOptions="Center" FontSize="30" TextColor="Red" />
+                <Label Text="{Binding BuyPrice}" Grid.Column="2" Grid.Row="2" HorizontalOptions="Center" FontSize="30" TextColor="Red"/>
+
+
+
+            </Grid>
+        </Border>
+        <!--Segundo Mensaje-->
+        <Border BackgroundColor="#feffff" MinimumHeightRequest="220">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10,10,0,0"/>
+            </Border.StrokeShape>
+            <VerticalStackLayout>
+                <Label Text="{Binding MatchMessage}" Padding="30" TextColor="Black"/>
+                <ImageButton Source="{Binding TransactionStateIcon}"  VerticalOptions="Center" HeightRequest="40" WidthRequest="40" />
+            </VerticalStackLayout>
+        </Border>
+        <Border BackgroundColor="#dce5ee" HeightRequest="40" Margin="0,-5,0,60" >
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="0,0,10,10"/>
+            </Border.StrokeShape>
+            <HorizontalStackLayout HorizontalOptions="Center" >
+                <ImageButton x:Name="logoutImage" Source="whatsappicon.svg"  IsVisible="True"   HeightRequest="20" WidthRequest="20" Command="{Binding WhatsAppContactCommand}"/>
+                <Label Text="{x:Static res:AppResources.AdminContactMsg}" Padding="9" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding WhatsAppContactCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+        </Border>
+    </VerticalStackLayout>
+
+
+
+</ContentPage>

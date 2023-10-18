@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/KajolBezol/Backend/KajolBezol/obj/Debug/net7.0
+/KajolBezol/Backend/KajolBezol/obj/Release/net7.0
